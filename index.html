@@ -196,5 +196,12 @@
   <p>Plain Talk for Tradies provides general writing templates only and is not legal, financial, safety or technical advice. ChatGPT, Claude and Gemini are trademarks of their respective owners. This product is not affiliated with or endorsed by them.</p>
  </div>
 </footer>
+<script>
+document.querySelector('form[name="free-sample"]').addEventListener('submit',function(e){
+ e.preventDefault();var f=e.target;
+ fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+ .catch(function(){}).finally(function(){window.location.href='/thanks.html';});
+});
+</script>
 </body>
 </html>
